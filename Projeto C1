@@ -1,0 +1,80 @@
+#include <stdio.h>
+
+int main()
+{
+    // definição das variáveis 
+    
+    int consumo, m3, m3t, total;
+    
+    float taxa, esgoto, agua;
+    
+    // entrada de dados em m3
+    
+    printf("Digite quanto foi consumido (valor em metros cubicos): ");
+    scanf("%d", &m3);
+    
+    // calculo da cobrança
+    
+    m3t = m3 - 10; 
+    
+    // calculo dos valores individuais agua e esgoto
+    
+    esgoto = 80.00 / 180.00;
+    agua = 100.00 / 180.00;
+    
+    // saida de dados
+    
+    if (m3 > 0 && m3 <= 10) {
+        
+        printf("\n Valor total é de 24.78 Reais");
+        printf("\n Valor da agua é de %.2f  Reais", 24.78 * agua);
+        printf("\n Valor do esgoto é de %2.f Reais", 24.78 * esgoto);        
+        
+    }
+
+    if (m3 > 10 && m3 <= 20) {
+        
+        taxa = m3t * 3.10 + 24.78;
+        
+        
+        printf("\n Valor total é de %.2f Reais", taxa);
+        printf("\n Valor da agua é de %.2f  Reais", (taxa) * agua);
+        printf("\n Valor do esgoto é de %2.f Reais", (taxa) * esgoto);
+    }
+
+    if (m3 > 20 && m3 <= 30) {
+        
+        taxa = m3t * 4.00 + 31.00;
+        
+        printf("\n Valor total é de %.2f Reais", taxa );
+        printf("\n Valor da agua é de %.2f Reais", taxa * agua);
+        printf("\n Valor do esgoto é de %.2f Reais", taxa * esgoto);
+    } 
+
+    if (m3 > 30 && m3 <= 50) {
+        
+        taxa =  m3t * 5.40 + 95.78;
+        
+        printf("\n Valor total é de %.2f Reais", taxa);
+        printf("\n Valor da agua é de %.2f Reais", taxa * agua);
+        printf("\n Valor do esgoto é de %.2f Reais", taxa * esgoto);
+    }    
+    
+    if (m3 > 50 && m3 <= 100) {
+        
+        taxa = m3t * 7.54 + 203.75;
+        
+        printf("\n Valor total é de %.2f Reais", taxa);
+        printf("\n Valor da agua é de %.2f Reais", taxa * agua);
+        printf("\n Valor do esgoto é de %.2f Reais", taxa * esgoto);
+    }
+    
+    printf("\n \nGuilherme Malagutti dos Santos");
+ 
+    
+    return 0;
+}
+
+
+
+
